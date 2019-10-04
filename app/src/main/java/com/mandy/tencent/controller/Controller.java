@@ -2,6 +2,8 @@ package com.mandy.tencent.controller;
 
 import com.mandy.tencent.MessageApis;
 import com.mandy.tencent.baseactivity.GetStatusApis;
+import com.mandy.tencent.kotlin.pojo.GetMessageListApi;
+import com.mandy.tencent.kotlin.pojo.SendMesage;
 import com.mandy.tencent.login.LoginApi;
 import com.mandy.tencent.myaccount.GetProfileApi;
 import com.mandy.tencent.projects.ProjectApis;
@@ -34,6 +36,8 @@ public class Controller {
     public UploadFile uploadFile;
     public UpdateAccount updateAccount;
     public Projects projects;
+    public SendMessage sendMessage;
+    public GetMessageList getMessageList;
 
 
     /*+++++++++++++SIGN UP+++++++++++++++*/
@@ -354,5 +358,60 @@ public class Controller {
         void error(String error);
     }
     /*++++++++++++++++END+++++++++++++++++*/
+
+    /*++++++++++++++++++++++++++++Post Message+++++++++++*/
+
+    public Controller(SendMessage sendMessage1, GetMessageList getMessageList1) {
+        sendMessage = sendMessage1;
+        getMessageList = getMessageList1;
+    }
+
+    public void setSendMessage(String userId, String Message) {
+        ApiInterface apiInterface = ServiceGenerator.createService(ApiInterface.class);
+        Call<SendMesage> call = apiInterface.sendMessage(userId, Message);
+        call.enqueue(new Callback<SendMesage>() {
+            @Override
+            public void onResponse(Call<SendMesage> call, Response<SendMesage> response) {
+                sendMessage.onSucessSend(response);
+            }
+
+            @Override
+            public void onFailure(Call<SendMesage> call, Throwable t) {
+                sendMessage.error(t.getMessage());
+            }
+        });
+    }
+
+    public interface SendMessage {
+        void onSucessSend(Response<SendMesage> response);
+
+        void error(String error);
+    }
+
+    /*++++++++++++++ENd+++++++++++++++++=*/
+
+    /*++++++++++++++++++++++++Get message list+++++++++++++++*/
+
+    public void setGetMessageList(String userId) {
+        ApiInterface apiInterface = ServiceGenerator.createService(ApiInterface.class);
+        Call<GetMessageListApi> call = apiInterface.getMessageList(userId);
+        call.enqueue(new Callback<GetMessageListApi>() {
+            @Override
+            public void onResponse(Call<GetMessageListApi> call, Response<GetMessageListApi> response) {
+                getMessageList.onSucessList(response);
+            }
+
+            @Override
+            public void onFailure(Call<GetMessageListApi> call, Throwable t) {
+                getMessageList.error(t.getMessage());
+            }
+        });
+    }
+
+    public interface GetMessageList {
+        void onSucessList(Response<GetMessageListApi> response);
+
+        void error(String error);
+    }
 
 }

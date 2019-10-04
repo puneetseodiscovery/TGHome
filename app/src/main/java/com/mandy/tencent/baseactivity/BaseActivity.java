@@ -24,7 +24,6 @@ import com.mandy.tencent.R;
 import com.mandy.tencent.controller.Controller;
 import com.mandy.tencent.kotlin.Main2Activity;
 import com.mandy.tencent.login.LoginActivity;
-import com.mandy.tencent.message.MessageActivity;
 import com.mandy.tencent.myaccount.GetProfileApi;
 import com.mandy.tencent.myaccount.MyAccountActivity;
 import com.mandy.tencent.nointernet.NoInternetActivity;

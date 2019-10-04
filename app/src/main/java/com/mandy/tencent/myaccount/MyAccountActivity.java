@@ -5,11 +5,9 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.SupportActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,11 +15,10 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.mandy.tencent.R;
-import com.mandy.tencent.baseactivity.BaseActivity;
 import com.mandy.tencent.baseactivity.GetStatusApis;
 import com.mandy.tencent.controller.Controller;
+import com.mandy.tencent.kotlin.Main2Activity;
 import com.mandy.tencent.login.LoginActivity;
-import com.mandy.tencent.message.MessageActivity;
 import com.mandy.tencent.nointernet.NoInternetActivity;
 import com.mandy.tencent.setting.SettingActivity;
 import com.mandy.tencent.upgrade.UpgradeActivity;
@@ -107,7 +104,7 @@ public class MyAccountActivity extends AppCompatActivity implements Controller.G
                 if (type.equals("normal")) {
                     showDialod2();
                 } else {
-                    Intent message = new Intent(MyAccountActivity.this, MessageActivity.class);
+                    Intent message = new Intent(MyAccountActivity.this, Main2Activity.class);
                     startActivity(message);
                 }
                 break;

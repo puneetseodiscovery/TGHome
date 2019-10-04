@@ -36,9 +36,6 @@
             android:name=".nointernet.NoInternetActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".message.MessageActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".upgrade.UpgradeActivity"
             android:screenOrientation="portrait">
 

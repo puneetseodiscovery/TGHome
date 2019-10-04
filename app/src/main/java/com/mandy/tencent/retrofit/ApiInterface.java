@@ -2,6 +2,8 @@ package com.mandy.tencent.retrofit;
 
 import com.mandy.tencent.MessageApis;
 import com.mandy.tencent.baseactivity.GetStatusApis;
+import com.mandy.tencent.kotlin.pojo.GetMessageListApi;
+import com.mandy.tencent.kotlin.pojo.SendMesage;
 import com.mandy.tencent.login.LoginApi;
 import com.mandy.tencent.myaccount.GetProfileApi;
 import com.mandy.tencent.projects.ProjectApis;
@@ -113,4 +115,17 @@ public interface ApiInterface {
     Call<ProjectApis> project(
             @Query("user_id") String userId
     );
+
+    //send message
+    @POST("message")
+    Call<SendMesage> sendMessage(
+            @Query("user_id") String userId,
+            @Query("message") String message
+    );
+
+    @GET("chat")
+    Call<GetMessageListApi> getMessageList(
+            @Query("user_id") String userId
+    );
+
 }
