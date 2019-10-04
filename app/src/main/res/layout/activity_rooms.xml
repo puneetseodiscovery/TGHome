@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".rooms.RoomsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/ic_room">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weare"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboar"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relative"
+            android:layout_margin="@dimen/margin"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose no. of rooms"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text" />
+
+                <TextView
+                    android:id="@+id/txtRoom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text" />
+
+            </RelativeLayout>
+
+            <SeekBar
+                android:id="@+id/seekRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding"
+                android:max="100" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginTop="@dimen/topmargin"
+                android:layout_marginRight="@dimen/padding">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="m2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text" />
+
+                <TextView
+                    android:id="@+id/txtm2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text" />
+
+            </RelativeLayout>
+
+            <SeekBar
+                android:id="@+id/seekm2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding"
+                android:max="1000" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding"
+                android:paddingTop="@dimen/topmargin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/switch1"
+                    android:text="@string/seek"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch1"
+                    style="@style/Theme.MyTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginRight="@dimen/padding"
+                android:paddingTop="@dimen/topmargin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/switch2"
+                    android:text="@string/seek"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch2"
+                    style="@style/Theme.MyTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/topmargin"
+                android:background="@drawable/buttonback"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin"
+                android:padding="@dimen/padding"
+                android:text="Back"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

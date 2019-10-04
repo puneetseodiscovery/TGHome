@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding">
+
+
+    <RelativeLayout
+        android:id="@+id/relRecieve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/reciverMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reciverImage"
+            android:layout_marginTop="-20dp"
+            android:layout_marginRight="@dimen/messageMargin"
+            android:background="@drawable/recivemessage"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/topmargin"
+            android:scrollbars="vertical"
+            android:text="@string/terms"
+            android:textColor="@color/white" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/reciverImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/messageMargin"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_room"
+            app:riv_oval="true" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+
+        <TextView
+            android:id="@+id/senderMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/senderImage"
+            android:layout_marginLeft="@dimen/messageMargin"
+            android:layout_marginTop="-18dp"
+            android:background="@drawable/sendermessage"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/topmargin"
+            android:scrollbars="vertical"
+            android:text="@string/terms"
+            android:textColor="@color/black" />
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/senderImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/messageMargin"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_room"
+            app:riv_oval="true" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

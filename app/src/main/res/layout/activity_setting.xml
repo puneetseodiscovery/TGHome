@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".setting.SettingActivity">
+
+    <include
+        android:id="@+id/tooolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tooolbar"
+        android:layout_marginTop="@dimen/padding"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/btnPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="Change password"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearPassword"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linear"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editOldPasword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_marginRight="@dimen/margin"
+            android:background="@drawable/editback"
+            android:hint="Old Password"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text" />
+
+        <EditText
+            android:id="@+id/editNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_marginRight="@dimen/margin"
+            android:background="@drawable/editback"
+            android:hint="New Password"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text" />
+
+        <EditText
+            android:id="@+id/editConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_marginRight="@dimen/margin"
+            android:background="@drawable/editback"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text" />
+
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/buttonback"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linear"
+        android:layout_marginTop="@dimen/topmargin"
+        android:orientation="vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add_user"
+            app:riv_oval="true" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_marginRight="@dimen/margin"
+            android:background="@drawable/editback"
+            android:hint="Name"
+            android:padding="@dimen/padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/padding"
+            android:layout_marginRight="@dimen/margin"
+            android:background="@drawable/editback"
+            android:hint="Email"
+            android:padding="@dimen/padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/buttonback"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

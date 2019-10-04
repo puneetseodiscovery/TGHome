@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".termsandcondition.TermsAndConditionActivity">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/ic_terms">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin"
+            android:text="@string/termsH"
+            android:textColor="@color/white"
+            android:textSize="@dimen/heading"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative"
+        android:layout_margin="@dimen/topmargin">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/radioButton"
+            android:layout_margin="@dimen/padding"
+            android:background="@color/lightgray"
+            app:cardCornerRadius="@dimen/topmargin"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/txtview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/padding"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:scrollbars="vertical"
+                android:text="@string/termsandcondition"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text" />
+
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btnAgree"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/padding"
+            android:text="@string/radioterm"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnAgree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/buttonback"
+            android:text="I Agree"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

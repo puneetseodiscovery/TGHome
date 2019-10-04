@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/padding"
+    android:paddingTop="@dimen/padding"
+    android:paddingRight="@dimen/padding">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="125dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="10dp" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:visibility="visible"
+        app:indicatorColor="@color/black"
+        app:indicatorName="BallSpinFadeLoaderIndicator" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_toRightOf="@id/imageView"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:hint=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/text" />
+
+        <TextView
+            android:id="@+id/txtM2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:hint=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/text" />
+
+
+        <Button
+            android:id="@+id/buttonGo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/action_btn"
+            android:text="View More"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear"
+        android:layout_marginTop="@dimen/padding"
+        android:background="#b1b1b1" />
+
+</RelativeLayout>

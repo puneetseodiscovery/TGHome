@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".upgrade.UpgradeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/ic_tanku">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upgrade"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/heading"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dashboar"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/relative"
+            android:layout_margin="@dimen/margin"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioStanderd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Standerd - $890"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text"
+                    android:textStyle="normal" />
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding"
+                    android:background="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/padding"
+                        android:inputType="textMultiLine"
+                        android:scrollbars="vertical"
+                        android:text="@string/upgrade"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text" />
+
+                </android.support.v7.widget.CardView>
+
+
+                <RadioButton
+                    android:id="@+id/radioAdvance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Advance - $1200"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text"
+                    android:textStyle="normal" />
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding"
+                    android:background="@color/white"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/padding"
+                        android:inputType="textMultiLine"
+                        android:scrollbars="vertical"
+                        android:text="@string/upgrade"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text" />
+
+                </android.support.v7.widget.CardView>
+
+
+                <RadioButton
+                    android:id="@+id/radioNoThanks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Thanks"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text"
+                    android:textStyle="normal" />
+
+            </RadioGroup>
+
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/topmargin"
+                android:background="@drawable/buttonback"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tooolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.Toolbar>
+
+    </RelativeLayout>
+
+</ScrollView>
